@@ -15,20 +15,17 @@ export const metadata: Metadata = {
   generator: "v0.app",
   icons: {
     icon: [
+      { url: "/favicon_io (1)/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon_io (1)/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon_io (1)/favicon.ico", sizes: "any" }
+    ],
+    apple: "/favicon_io (1)/apple-touch-icon.png",
+    other: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        rel: 'manifest',
+        url: '/favicon_io (1)/site.webmanifest',
       },
     ],
-    apple: "/apple-icon.png",
   },
 }
 

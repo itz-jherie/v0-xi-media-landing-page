@@ -1,70 +1,91 @@
 import Image from "next/image"
+import { SubscriptionForm } from "@/components/subscription-form"
+import { PdfIcon } from "@/components/pdf-icon"
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen flex flex-col relative overflow-hidden bg-brand-bg">
-      {/* Background Gradient Shadow from reference */}
-      <div className="absolute bottom-0 left-0 right-0 h-[50vh] bg-gradient-to-t from-black/95 to-transparent pointer-events-none" />
+    <main className="min-h-screen w-full relative bg-[#0F0F0F] flex flex-col font-sans antialiased">
+      {/* Hero Content Section */}
+      <div className="relative z-10 flex-1 flex flex-col w-full bg-[#0F0F0F]">
+        <div className="flex-1 flex flex-col w-full max-w-[1240px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
+          {/* Navigation - More breathing room at top */}
+          <header className="flex items-center shrink-0 pt-10 md:pt-16 pb-12 md:pb-0">
+            <Image
+              src="/images/logo.png"
+              alt="XiMedia Logo"
+              width={140}
+              height={40}
+              className="h-6 md:h-8 w-auto object-contain"
+            />
+          </header>
 
-      <div className="z-10 w-full max-w-7xl mx-auto px-6 md:px-12 py-8 md:py-16 flex flex-col gap-12 md:gap-20 lg:gap-32">
-        {/* Navigation */}
-        <nav className="flex items-center">
-          <Image
-            src="/images/logo.png"
-            alt="XiMedia Logo"
-            width={140}
-            height={40}
-            className="h-7 md:h-9 lg:h-10 w-auto object-contain"
-          />
-        </nav>
-
-        {/* Hero Section */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Side: Book Cover (Mockup style) */}
-          <div className="relative flex justify-center w-full max-w-[340px] sm:max-w-[420px] lg:max-w-none lg:justify-start order-2 lg:order-1 mx-auto lg:mx-0">
-            <div className="relative w-full aspect-[3/4.5] lg:w-[500px]">
-              <Image
-                src="/images/book-20cover-201.png"
-                alt="The New Rules of Social Growth Book Cover"
-                fill
-                className="object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Right Side: Content */}
-          <div className="flex flex-col gap-8 md:gap-10 lg:gap-12 order-1 lg:order-2 w-full text-center lg:text-left">
-            <div className="flex flex-col gap-4 md:gap-6 lg:gap-8">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-bold leading-[1.1] tracking-tight text-white text-balance">
-                Boost every platform <br className="hidden lg:block" /> that matters
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl text-white/50 max-w-xl mx-auto lg:mx-0 leading-relaxed text-pretty">
-                From social media to website traffic and music streaming XiBooster supports growth across the platforms
-                your audience already uses.
-              </p>
-            </div>
-
-            {/* Subscription Form */}
-            <form className="flex flex-col sm:flex-row items-stretch gap-3 sm:gap-4 max-w-lg mx-auto lg:mx-0 w-full">
-              <div className="relative flex-grow">
-                <input
-                  type="email"
-                  placeholder="Email address"
-                  className="w-full bg-brand-secondary border border-white/10 rounded-full px-6 md:px-8 py-4 md:py-5 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary/30 transition-all placeholder:text-white/20 text-base md:text-lg"
-                  required
+          {/* Main Content + Book Section - Significant vertical padding */}
+          <div className="flex-1 flex flex-col lg:flex-row items-center gap-16 lg:gap-24 py-12 lg:py-24">
+            {/* Left Side: Large Book Cover */}
+            <div className="relative flex-1 flex justify-center lg:justify-start w-full max-w-[420px]">
+              <div className="relative w-full aspect-[3/4] drop-shadow-[0_45px_45px_rgba(0,0,0,0.7)] group">
+                <Image
+                  src="/images/book-20cover-201.png"
+                  alt="The New Rules of Social Growth"
+                  fill
+                  className="object-contain transition-transform duration-700 group-hover:scale-[1.01]"
+                  priority
                 />
               </div>
-              <button
-                type="submit"
-                className="bg-brand-primary hover:opacity-90 text-brand-bg font-bold px-8 md:px-10 py-4 md:py-5 rounded-full transition-all transform active:scale-95 whitespace-nowrap text-base md:text-lg shadow-[0_0_20px_rgba(0,224,182,0.15)] cursor-pointer"
-              >
-                Download
-              </button>
-            </form>
+            </div>
+
+            {/* Right Side: Content Area */}
+            <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
+              {/* Headlines */}
+              <div className="flex flex-col gap-6 mb-8">
+                <h1 className="hero-heading">
+                  Grow on social without<br className="hidden lg:block" /> working harder
+                </h1>
+                <p className="hero-description mx-auto lg:mx-0">
+                  A practical guide to building visibility momentum and authority across platforms without chasing trends or posting every day
+                </p>
+              </div>
+
+              {/* Support Info */}
+              <div className="flex flex-col items-center lg:items-start w-full">
+                <p className="hero-disclaimer mb-8">
+                  Results vary based on content quality consistency and audience
+                </p>
+
+                <div className="flex flex-col items-center lg:items-start w-full">
+                  {/* Form Section - Order 1 on mobile, Order 2 on Desktop */}
+                  <div className="mb-6 w-full max-w-[380px] order-1 lg:order-2">
+                    <SubscriptionForm />
+                  </div>
+
+                  {/* PDF Info - Order 2 on mobile, Order 1 on Desktop */}
+                  <div className="flex items-center gap-3 justify-center lg:justify-start mb-8 order-2 lg:order-1">
+                    <PdfIcon className="w-[18px] h-[24px] shrink-0" />
+                    <span className="hero-guide-text">
+                      Free 3 page strategic guide
+                    </span>
+                  </div>
+
+                  {/* Unsubscribe Tagline - Order 3 on both */}
+                  <p className="hero-disclaimer order-3">
+                    We respect your privacy. No spam. Unsubscribe anytime.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
+
+      {/* Footer Credit - Deep black background only for footer */}
+      <footer className="shrink-0 pt-20 pb-12 md:pb-20 bg-[#0A0A0A] w-full z-10 transition-colors duration-300">
+        <div className="max-w-[1240px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
+          <p className="text-center text-[13px] font-normal tracking-wide text-white/30">
+            Built by Xi Media a social media agency focused on sustainable growth
+          </p>
+        </div>
+      </footer>
+
     </main>
   )
 }
