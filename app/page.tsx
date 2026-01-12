@@ -22,7 +22,7 @@ export default function LandingPage() {
           {/* Main Content + Book Section - Significant vertical padding */}
           <div className="flex-1 flex flex-col lg:flex-row items-center gap-16 lg:gap-24 py-12 lg:py-24">
             {/* Left Side: Large Book Cover */}
-            <div className="relative flex-1 flex justify-center lg:justify-start w-full max-w-[420px]">
+            <div className="relative flex-1 flex justify-center lg:justify-start w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[420px]">
               <div className="relative w-full aspect-[3/4] drop-shadow-[0_45px_45px_rgba(0,0,0,0.7)] group">
                 <Image
                   src="/images/book-20cover-201.png"
@@ -49,7 +49,7 @@ export default function LandingPage() {
               {/* Support Info */}
               <div className="flex flex-col items-center lg:items-start w-full">
                 <p className="hero-disclaimer mb-8">
-                  Results vary based on content quality consistency and audience
+                  Results vary based on content quality <br /> consistency and audience
                 </p>
 
                 <div className="flex flex-col items-center lg:items-start w-full">
@@ -81,7 +81,7 @@ export default function LandingPage() {
       <footer className="shrink-0 pt-20 pb-12 md:pb-20 bg-[#0A0A0A] w-full z-10 transition-colors duration-300">
         <div className="max-w-[1240px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
           <p className="text-center text-[13px] font-normal tracking-wide text-white/30">
-            Built by Xi Media a social media agency focused on sustainable growth
+            Built by XiMedia a social media agency focused on sustainable growth
           </p>
         </div>
       </footer>

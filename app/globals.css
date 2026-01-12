@@ -167,8 +167,27 @@
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;
-  color: #EAFDFF;
+  color: #fff;
   max-width: 480px;
+}
+
+@media (max-width: 1024px) {
+  .hero-description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-description {
+    font-size: 16px;
+    line-height: 22px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    overflow: hidden;
+  }
 }
 
 .hero-disclaimer {
