@@ -62,7 +62,7 @@ export default function LandingPage() {
                   <div className="flex items-center gap-3 justify-center lg:justify-start mb-8 order-2 lg:order-1">
                     <PdfIcon className="w-[18px] h-[24px] shrink-0" />
                     <span className="hero-guide-text">
-                      Free 3 page strategic guide
+                      Free 2 Pages strategic guide
                     </span>
                   </div>
 

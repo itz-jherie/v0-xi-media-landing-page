@@ -26,8 +26,8 @@ export function SubscriptionForm() {
 
             // Trigger PDF download
             const link = document.createElement("a")
-            link.href = "/XiMedia Resources.pdf"
-            link.download = "XiMedia Resources.pdf"
+            link.href = "/THE SIMPLE SYSTEM FOR SOCIAL MEDIA GROWTH.pdf"
+            link.download = "THE SIMPLE SYSTEM FOR SOCIAL MEDIA GROWTH.pdf"
             document.body.appendChild(link)
             link.click()
             document.body.removeChild(link)
