@@ -10,7 +10,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "XiMedia - Boost Every Platform",
+  title: "XiMedia - Grow every platform that matters",
   description: "Boost growth across the platforms your audience already uses.",
   generator: "v0.app",
   icons: {
